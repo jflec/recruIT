@@ -1,8 +1,16 @@
 @import './reset.css';
 @import './navbar.css';
 
+/* 
+#26292B dark
+#2E3239 lighter dark
+#5F7ADB purple
+#A2B2EE lighter purple
+#FFFFFF white
+*/
+
 body {
-  display: flex;
-  justify-content: center;
-  color: red;
+  background-color: #ffffff;
+  font-family: 'Manrope', sans-serif;
+  color: #ffffff;
 }

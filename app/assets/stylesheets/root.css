@@ -1,0 +1,8 @@
+@import './reset.css';
+@import './navbar.css';
+
+body {
+  display: flex;
+  justify-content: center;
+  color: red;
+}

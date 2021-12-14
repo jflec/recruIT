@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Listing from './Listing';
 
 const Listings = () => {
   const [listings, setListings] = useState([]);
@@ -13,27 +14,7 @@ const Listings = () => {
 
   const list = listings.map((listing) => {
     return (
-      <div className="listing-item" key={listing.attributes.id}>
-        <div className="listing-item-recruiter">
-          <div className="listing-item-recruiter-picture"></div>
-          <p>John Doe</p>
-        </div>
-        <div className="listing-item-description">
-          <div className="listing-item-header">
-            <h1>
-              {`${listing.attributes.experience_level}-level`}{' '}
-              {listing.attributes.title} {listing.attributes.position_type}{' '}
-              {listing.attributes.location}
-            </h1>
-          </div>
-          {listing.attributes.skills.map((skill) => {
-            return <p>{skill}</p>;
-          })}
-          <p>{listing.attributes.work_experience}</p>
-          <p>{listing.attributes.description}</p>
-        </div>
-        <div className="listing-item-company">{listing.attributes.company}</div>
-      </div>
+      <Listing key={listing.attributes.name} attributes={listing.attributes} />
     );
   });
 

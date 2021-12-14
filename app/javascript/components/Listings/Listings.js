@@ -12,7 +12,23 @@ const Listings = () => {
   }, [listings.length]);
 
   const list = listings.map((listing) => {
-    return <li key={listing.attributes.title}>{listing.attributes.title}</li>;
+    return (
+      <div className="listing-item" key={listing.attributes.id}>
+        <div className="listing-item-recruiter">
+          <div className="listing-item-recruiter-picture"></div>
+          <p>John Doe</p>
+        </div>
+        <div className="listing-item-description">
+          {`${listing.attributes.experience_level}-level`}
+          {listing.attributes.title}
+          {listing.attributes.location}
+          {listing.attributes.position_type}
+          {listing.attributes.skills}
+          {listing.attributes.work_experience}
+        </div>
+        <div className="listing-item-company">{listing.attributes.company}</div>
+      </div>
+    );
   });
 
   return listings.length > 1 ? (

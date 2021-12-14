@@ -19,11 +19,16 @@ const Listings = () => {
           <p>John Doe</p>
         </div>
         <div className="listing-item-description">
-          <p>{`${listing.attributes.experience_level}-level`}</p>
-          <p>{listing.attributes.title}</p>
-          <p>{listing.attributes.location}</p>
-          <p>{listing.attributes.position_type}</p>
-          <p>{listing.attributes.skills}</p>
+          <div className="listing-item-header">
+            <h1>
+              {`${listing.attributes.experience_level}-level`}{' '}
+              {listing.attributes.title} {listing.attributes.position_type}{' '}
+              {listing.attributes.location}
+            </h1>
+          </div>
+          {listing.attributes.skills.map((skill) => {
+            return <p>{skill}</p>;
+          })}
           <p>{listing.attributes.work_experience}</p>
           <p>{listing.attributes.description}</p>
         </div>
@@ -33,12 +38,9 @@ const Listings = () => {
   });
 
   return listings.length > 1 ? (
-    <div id="listings">
-      <h1>listings</h1>
-      {list}
-    </div>
+    <div id="listings">{list}</div>
   ) : (
-    <div>waiting</div>
+    <div>Fetching Jobs</div>
   );
 };
 

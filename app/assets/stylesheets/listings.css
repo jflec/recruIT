@@ -9,7 +9,7 @@
 
 .listing-item {
   position: relative;
-  border: 1px solid rgb(200, 200, 200);
+  border: 1px solid rgb(210, 210, 210);
   width: 800px;
   height: 140px;
   display: grid;
@@ -17,6 +17,7 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: 0.6s;
+  background-color: white;
 }
 
 .listing-item:hover {
@@ -34,14 +35,14 @@
 .listing-item-recruiter-picture {
   width: 50px;
   height: 50px;
-  background-color: rgb(226, 226, 226);
-  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .listing-item-recruiter {
-  border-right: 1px solid rgb(200, 200, 200);
+  border-right: 1px solid rgb(210, 210, 210);
   gap: 10px;
 }
 
@@ -53,5 +54,11 @@
 }
 
 .listing-item-company {
-  border-left: 1px solid rgb(200, 200, 200);
+  border-left: 1px solid rgb(210, 210, 210);
+}
+
+.listing-item-header {
+  display: flex;
+  flex-direction: row;
+  font-weight: 600;
 }

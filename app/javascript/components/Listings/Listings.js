@@ -19,12 +19,13 @@ const Listings = () => {
           <p>John Doe</p>
         </div>
         <div className="listing-item-description">
-          {`${listing.attributes.experience_level}-level`}
-          {listing.attributes.title}
-          {listing.attributes.location}
-          {listing.attributes.position_type}
-          {listing.attributes.skills}
-          {listing.attributes.work_experience}
+          <p>{`${listing.attributes.experience_level}-level`}</p>
+          <p>{listing.attributes.title}</p>
+          <p>{listing.attributes.location}</p>
+          <p>{listing.attributes.position_type}</p>
+          <p>{listing.attributes.skills}</p>
+          <p>{listing.attributes.work_experience}</p>
+          <p>{listing.attributes.description}</p>
         </div>
         <div className="listing-item-company">{listing.attributes.company}</div>
       </div>

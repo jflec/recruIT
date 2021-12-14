@@ -45,6 +45,13 @@
   gap: 10px;
 }
 
+.listing-item-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .listing-item-company {
   border-left: 1px solid rgb(200, 200, 200);
 }

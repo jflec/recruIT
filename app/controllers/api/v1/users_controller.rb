@@ -5,7 +5,6 @@ module Api
                 @users = User.all
                 render @users
             end
-
         end
     end
 end

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-
+import { Link } from 'react-router-dom';
+import ListingShow from './ListingShow';
 import axios from 'axios';
 
 const Listing = () => {
@@ -21,8 +22,17 @@ const Listing = () => {
   }, []);
 
   return (
-    <div id="listing">
-      {loaded ? <h1>{listing.data.attributes.title}</h1> : <div>loading</div>}
+    <div id="listing-container">
+      <Link to="/">
+        <div id="back-button"></div>
+      </Link>
+      <div id="listing">
+        {loaded ? (
+          <ListingShow attributes={listing.data.attributes} />
+        ) : (
+          <div>loading</div>
+        )}
+      </div>
     </div>
   );
 };

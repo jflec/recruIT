@@ -1,6 +1,3 @@
-@import './reset.css';
-@import './navbar.css';
-@import './list_item.css';
 /* 
 #26292B dark
 #2E3239 lighter dark
@@ -8,12 +5,14 @@
 #A2B2EE lighter purple
 #FFFFFF white
 */
+
 body {
-  background-color: #f3f3f3;
+  background-color: #e0e5ec;
   font-family: 'Manrope', sans-serif;
   color: #000000;
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 a {

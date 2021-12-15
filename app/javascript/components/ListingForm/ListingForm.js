@@ -4,18 +4,90 @@ const ListingForm = (props) => {
   return (
     <div className="listing-form">
       <form onSubmit={props.handleSubmit}>
-        <input
-          onChange={props.handleChange}
-          type="text"
-          name="title"
-          placeholder="title"
-        ></input>
-        <input
-          onChange={props.handleChange}
-          type="text"
-          name="description"
-          placeholder="description"
-        ></input>
+        <div id="title-buttons">
+          <input
+            type="radio"
+            value={'Frontend'}
+            name="title"
+            onChange={props.handleChange}
+          ></input>
+          <input
+            type="radio"
+            value={'Backend'}
+            name="title"
+            onChange={props.handleChange}
+          ></input>
+          <input
+            type="radio"
+            value={'Fullstack'}
+            name="title"
+            onChange={props.handleChange}
+          ></input>
+        </div>
+
+        <div id="experience_level-buttons">
+          <input
+            type="radio"
+            value={'Junior'}
+            name="experience_level"
+            onChange={props.handleChange}
+          ></input>
+          <input
+            type="radio"
+            value={'Mid'}
+            name="experience_level"
+            onChange={props.handleChange}
+          ></input>
+          <input
+            type="radio"
+            value={'Senior'}
+            name="experience_level"
+            onChange={props.handleChange}
+          ></input>
+        </div>
+
+        <div id="skills-buttons">
+          <input
+            type="checkbox"
+            value={'React'}
+            name="skills"
+            onChange={props.handleChange}
+          ></input>
+          <input
+            type="checkbox"
+            value={'Redux'}
+            name="skills"
+            onChange={props.handleChange}
+          ></input>
+          <input
+            type="checkbox"
+            value={'Ruby'}
+            name="skills"
+            onChange={props.handleChange}
+          ></input>
+        </div>
+
+        <div id="position_type-buttons">
+          <input
+            type="radio"
+            value={'Contract'}
+            name="position_type"
+            onChange={props.handleChange}
+          ></input>
+          <input
+            type="radio"
+            value={'Part-time'}
+            name="position_type"
+            onChange={props.handleChange}
+          ></input>
+          <input
+            type="radio"
+            value={'Full-time'}
+            name="position_type"
+            onChange={props.handleChange}
+          ></input>
+        </div>
+
         <input
           onChange={props.handleChange}
           type="text"
@@ -31,20 +103,8 @@ const ListingForm = (props) => {
         <input
           onChange={props.handleChange}
           type="text"
-          name="position_type"
-          placeholder="position_type"
-        ></input>
-        <input
-          onChange={props.handleChange}
-          type="text"
-          name="experience_level"
-          placeholder="experience_level"
-        ></input>
-        <input
-          onChange={props.handleChange}
-          type="text"
-          name="skills"
-          placeholder="skills"
+          name="description"
+          placeholder="description"
         ></input>
 
         <button type="submit"></button>

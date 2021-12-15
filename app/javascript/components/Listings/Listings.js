@@ -16,7 +16,6 @@ const Listings = () => {
 
   const handleChange = (e) => {
     setListing(Object.assign({}, listing, { [e.target.name]: e.target.value }));
-    console.log('title:', listing);
   };
 
   const handleSubmit = (e) => {

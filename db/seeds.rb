@@ -11,7 +11,7 @@ listings = Listing.create!([
     {
         title: "Fullstack",
         description: "We are cool!",
-        recruiter_id: "0",
+        # user_id: "0",
         company: "Google",
         location: "Remote",
         position_type: "Fulltime",
@@ -22,7 +22,7 @@ listings = Listing.create!([
     {
         title: "Frontend",
         description: "CSS not included!",
-        recruiter_id: "1",
+        # user_id: "1",
         company: "Cloudflare",
         location: "Hybrid",
         position_type: "Contract",
@@ -33,7 +33,7 @@ listings = Listing.create!([
     {
         title: "Backend",
         description: "CSS not included!",
-        recruiter_id: "1",
+        # user_id: "1",
         company: "Microsoft",
         location: "On-site",
         position_type: "Part-time",
@@ -44,7 +44,7 @@ listings = Listing.create!([
     {
         title: "Fullstack",
         description: "We are cool!",
-        recruiter_id: "0",
+        # user_id: "0",
         company: "Google",
         location: "Remote",
         position_type: "Fulltime",
@@ -55,7 +55,7 @@ listings = Listing.create!([
     {
         title: "Frontend",
         description: "CSS not included!",
-        recruiter_id: "1",
+        # user_id: "1",
         company: "Cloudflare",
         location: "Hybrid",
         position_type: "Contract",
@@ -66,7 +66,7 @@ listings = Listing.create!([
     {
         title: "Backend",
         description: "CSS not included!",
-        recruiter_id: "1",
+        # user_id: "1",
         company: "Microsoft",
         location: "On-site",
         position_type: "Part-time",
@@ -77,7 +77,7 @@ listings = Listing.create!([
      {
         title: "Fullstack",
         description: "We are cool!",
-        recruiter_id: "0",
+        # user_id: "0",
         company: "Google",
         location: "Remote",
         position_type: "Fulltime",
@@ -88,7 +88,7 @@ listings = Listing.create!([
     {
         title: "Frontend",
         description: "CSS not included!",
-        recruiter_id: "1",
+        # user_id: "1",
         company: "Cloudflare",
         location: "Hybrid",
         position_type: "Contract",
@@ -99,7 +99,7 @@ listings = Listing.create!([
     {
         title: "Backend",
         description: "CSS not included!",
-        recruiter_id: "1",
+        # user_id: "1",
         company: "Microsoft",
         location: "Remote",
         position_type: "Part-time",
@@ -110,7 +110,7 @@ listings = Listing.create!([
     {
         title: "Fullstack",
         description: "We are cool!",
-        recruiter_id: "0",
+        # user_id: "0",
         company: "Google",
         location: "Remote",
         position_type: "Fulltime",
@@ -121,7 +121,7 @@ listings = Listing.create!([
     {
         title: "Frontend",
         description: "CSS not included!",
-        recruiter_id: "1",
+        # user_id: "1",
         company: "Cloudflare",
         location: "Hybrid",
         position_type: "Contract",
@@ -132,7 +132,7 @@ listings = Listing.create!([
     {
         title: "Backend",
         description: "CSS not included!",
-        recruiter_id: "1",
+        # user_id: "1",
         company: "Microsoft",
         location: "Remote",
         position_type: "Part-time",

@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 2021_12_14_005141) do
   create_table "listings", force: :cascade do |t|
     t.string "title", null: false
     t.string "description", null: false
-    t.string "recruiter_id", null: false
     t.string "company", null: false
     t.string "company_image_url"
     t.string "company_size"

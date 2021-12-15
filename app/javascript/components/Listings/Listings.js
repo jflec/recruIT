@@ -15,13 +15,25 @@ const Listings = () => {
   }, [listings.length]);
 
   const handleChange = (e) => {
-    e.preventDefault();
-
     setListing(Object.assign({}, listing, { [e.target.name]: e.target.value }));
-
     console.log('title:', listing);
   };
-  const handleSubmit = (e) => {};
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const csrfToken = document.querySelector('[name=csrf-token]').content;
+    axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken;
+
+    axios
+      .post('/api/v1/listings', listing)
+      .then((resp) => {
+        const included = [...listings.include, resp.data.data];
+        setListings({ ...listings, included });
+        setListing({ title: '', description: '' });
+      })
+      .catch((resp) => {});
+  };
 
   const list = listings.map((listing) => {
     return (

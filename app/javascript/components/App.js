@@ -11,7 +11,7 @@ const App = () => {
   ]);
   return (
     <div id="App">
-      <Navbar />
+      {/* <Navbar /> */}
       {routes}
     </div>
   );

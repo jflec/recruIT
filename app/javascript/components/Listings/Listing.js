@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Listing = (props) => {
   return (
     <Link to={`/listings/${props.attributes.id}`}>
-      <div className="listing-item" key="test">
+      <div className="listing-item">
         <div className="listing-item-recruiter">
           <div className="listing-item-recruiter-picture"></div>
           <p>John Doe</p>

@@ -74,14 +74,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
-  background: #e0e5ec;
-  box-shadow: 14px 14px 28px #bec3c9, -14px -14px 28px #ffffff;
-}
-
-#back-button:hover {
-  transition: 0.4s;
-  border-radius: 12px;
-  background: linear-gradient(145deg, #caced4, #f0f5fd);
-  box-shadow: 14px 14px 28px #bec3c9, -14px -14px 28px #ffffff;
+  background-color: red;
 }

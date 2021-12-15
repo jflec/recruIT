@@ -65,7 +65,7 @@
 }
 
 #back-button {
-  transition: 0.4s;
+  transition: 0.2s;
   position: absolute;
   top: 60px;
   left: 60px;
@@ -74,5 +74,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: red;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+#back-button:hover {
+  transition: 0.2s;
+  background-color: rgb(241, 241, 241);
 }

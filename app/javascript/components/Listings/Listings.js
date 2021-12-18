@@ -31,7 +31,9 @@ const Listings = () => {
         setListings({ ...listings, included });
         setListing({ title: '', description: '' });
       })
-      .catch((resp) => {});
+      .catch((resp) => {
+        console.log(resp);
+      });
   };
 
   const list = listings.map((listing) => {

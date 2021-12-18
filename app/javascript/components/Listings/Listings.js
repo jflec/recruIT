@@ -6,7 +6,7 @@ import ListingForm from '../ListingForm/ListingForm';
 const Listings = () => {
   const [listings, setListings] = useState([]);
   const [listing, setListing] = useState({});
-  const [skills, setSkills] = useState([]);
+  const [skills, setSkills] = useState(Array(0));
 
   useEffect(() => {
     axios
@@ -49,7 +49,7 @@ const Listings = () => {
           location: null,
           experience_level: null,
           position_type: null,
-          skills: null,
+          skills: [],
         });
       })
       .catch((resp) => {

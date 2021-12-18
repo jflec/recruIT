@@ -12,10 +12,6 @@ const ListingShow = (props) => {
     work_experience,
   } = props.attributes;
 
-  useEffect(() => {
-    console.log(props);
-  });
-
   return (
     <div>
       <div id="listing-show">

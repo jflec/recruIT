@@ -1,22 +1,56 @@
-/* .listing-form {
-  background-color: rgb(255, 255, 255);
+.listing-form-container {
+  background-color: rgb(15, 15, 15);
   left: 50%;
   top: 50%;
-  margin-left: -400px;
-  margin-top: -400px;
+  margin-left: -300px;
+  margin-top: -300px;
   position: absolute;
-  width: 800px;
-  height: 800px;
+  width: 600px;
+  height: 600px;
   z-index: 2;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-}
-
-#title-buttons * {
-} */
-
-.listing-form {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#listing-form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 18px;
+}
+
+#title-buttons {
+  gap: 4px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#experience_level-buttons {
+  gap: 4px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#position_type-buttons {
+  gap: 4px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#listing-form-textbox-container {
+  gap: 4px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
 }

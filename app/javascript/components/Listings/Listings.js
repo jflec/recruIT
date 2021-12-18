@@ -6,6 +6,7 @@ import ListingForm from '../ListingForm/ListingForm';
 const Listings = () => {
   const [listings, setListings] = useState([]);
   const [listing, setListing] = useState({});
+  const [skills, setSkills] = useState([]);
 
   useEffect(() => {
     axios
@@ -13,6 +14,18 @@ const Listings = () => {
       .then((resp) => setListings(resp.data.data))
       .catch((resp) => console.log(resp));
   }, [listings.length]);
+
+  const handleCheckboxChange = (e) => {
+    const isChecked = e.target.checked;
+    if (isChecked) {
+      setSkills([...skills, e.target.value]);
+    } else {
+      const index = skills.indexOf(e.target.value);
+      skills.splice(index, 1);
+      setSkills(skills);
+    }
+    setListing(Object.assign({}, listing, { [e.target.name]: skills }));
+  };
 
   const handleChange = (e) => {
     setListing(Object.assign({}, listing, { [e.target.name]: e.target.value }));
@@ -27,9 +40,17 @@ const Listings = () => {
     axios
       .post('/api/v1/listings', listing)
       .then((resp) => {
-        const included = [...listings.include, resp.data.data];
-        setListings({ ...listings, included });
-        setListing({ title: '', description: '' });
+        const included = [...listings, resp.data.data];
+        setListings(included);
+        setListing({
+          title: null,
+          description: null,
+          company: null,
+          location: null,
+          experience_level: null,
+          position_type: null,
+          skills: null,
+        });
       })
       .catch((resp) => {
         console.log(resp);
@@ -44,7 +65,11 @@ const Listings = () => {
 
   return listings.length > 1 ? (
     <Fragment>
-      <ListingForm handleChange={handleChange} handleSubmit={handleSubmit} />
+      <ListingForm
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        handleCheckboxChange={handleCheckboxChange}
+      />
       <div id="listings">{list}</div>
     </Fragment>
   ) : (

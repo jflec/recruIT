@@ -1,158 +1,135 @@
 import React from 'react';
 
 const ListingForm = (props) => {
+  const skills = [
+    'Golang',
+    'Python',
+    'Django',
+    'Scala',
+    'C++',
+    'Java',
+    'C#',
+    '.NET',
+    'Javascript',
+    'Ruby',
+    'Rails',
+    'Perl',
+    'PHP',
+    'Laravel',
+    'Vue.js',
+    'Angular',
+    'Node.js',
+    'Next.js',
+    'GraphQL',
+    'PostgreSQL',
+    'Redis',
+    'SCSS',
+    'Tailwind CSS',
+    'AWS',
+    'Kotlin',
+    'Git',
+    'Typescript',
+    'SQL',
+    'MongoDB',
+    'Express.js',
+    'Redux',
+    'React',
+    'MySQL',
+    'RSpec',
+    'Capybara',
+    'Jest',
+    'Docker',
+    'Jenkins',
+  ].sort();
+
+  const titles = ['Frontend', 'Backend', 'Fullstack'];
+  const experience_levels = ['Junior', 'Mid', 'Senior'];
+  const position_types = ['Contract', 'Part-time', 'Full-time'];
+  const textboxes = ['company', 'location', 'description'];
+
   return (
     <div className="listing-form-container">
       <form id="listing-form" onSubmit={props.handleSubmit}>
         <div id="title-buttons">
-          <label>
-            <input
-              type="radio"
-              value={'Frontend'}
-              name="title"
-              onChange={props.handleChange}
-            ></input>
-            Frontend
-          </label>
-          <label>
-            <input
-              type="radio"
-              value={'Backend'}
-              name="title"
-              onChange={props.handleChange}
-            ></input>
-            Backend
-          </label>
-          <label>
-            <input
-              type="radio"
-              value={'Fullstack'}
-              name="title"
-              onChange={props.handleChange}
-            ></input>
-            Fullstack
-          </label>
+          {titles.map((title) => {
+            return (
+              <label>
+                <input
+                  type="radio"
+                  value={title}
+                  name="title"
+                  onChange={props.handleChange}
+                ></input>
+                {title}
+              </label>
+            );
+          })}
         </div>
 
         <div id="experience_level-buttons">
-          <label>
-            <input
-              type="radio"
-              value={'Junior'}
-              name="experience_level"
-              onChange={props.handleChange}
-            ></input>
-            Junior
-          </label>
-          <label>
-            <input
-              type="radio"
-              value={'Mid'}
-              name="experience_level"
-              onChange={props.handleChange}
-            ></input>
-            Mid
-          </label>
-          <label>
-            <input
-              type="radio"
-              value={'Senior'}
-              name="experience_level"
-              onChange={props.handleChange}
-            ></input>
-            Senior
-          </label>
+          {experience_levels.map((experience_level) => {
+            return (
+              <label>
+                <input
+                  type="radio"
+                  value={experience_level}
+                  name="experience_level"
+                  onChange={props.handleChange}
+                ></input>
+                {experience_level}
+              </label>
+            );
+          })}
         </div>
 
         <div id="position_type-buttons">
-          <label>
-            <input
-              type="radio"
-              value={'Contract'}
-              name="position_type"
-              onChange={props.handleChange}
-            ></input>
-            Contract
-          </label>
-          <label>
-            <input
-              type="radio"
-              value={'Part-time'}
-              name="position_type"
-              onChange={props.handleChange}
-            ></input>
-            Part-time
-          </label>
-          <label>
-            <input
-              type="radio"
-              value={'Full-time'}
-              name="position_type"
-              onChange={props.handleChange}
-            ></input>
-            Full-time
-          </label>
+          {position_types.map((position_type) => {
+            return (
+              <label>
+                <input
+                  type="radio"
+                  value={position_type}
+                  name="position_type"
+                  onChange={props.handleChange}
+                ></input>
+                {position_type}
+              </label>
+            );
+          })}
         </div>
 
         <div id="skills-buttons">
-          <label>
-            <input
-              type="checkbox"
-              value={'React'}
-              name="skills"
-              onChange={props.handleChange}
-            ></input>
-            React
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              value={'Redux'}
-              name="skills"
-              onChange={props.handleChange}
-            ></input>
-            Redux
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              value={'Ruby'}
-              name="skills"
-              onChange={props.handleChange}
-            ></input>
-            Ruby
-          </label>
+          {skills.map((skill) => {
+            return (
+              <label>
+                <input
+                  type="checkbox"
+                  value={skill}
+                  name="skills"
+                  onChange={props.handleCheckboxChange}
+                ></input>
+                {skill}
+              </label>
+            );
+          })}
         </div>
 
         <div id="listing-form-textbox-container">
-          <label>
-            <input
-              onChange={props.handleChange}
-              type="text"
-              name="company"
-              placeholder="company"
-            ></input>
-            Company
-          </label>
-          <label>
-            <input
-              onChange={props.handleChange}
-              type="text"
-              name="location"
-              placeholder="location"
-            ></input>
-            Location
-          </label>
-          <label>
-            <input
-              onChange={props.handleChange}
-              type="text"
-              name="description"
-              placeholder="description"
-            ></input>
-            Description
-          </label>
+          {textboxes.map((textbox) => {
+            return (
+              <label>
+                <input
+                  onChange={props.handleChange}
+                  type="text"
+                  name={textbox}
+                  placeholder={textbox}
+                ></input>
+                {textbox.charAt(0).toUpperCase() + textbox.slice(1)}
+              </label>
+            );
+          })}
         </div>
+
         <button type="submit">SUBMIT</button>
       </form>
     </div>

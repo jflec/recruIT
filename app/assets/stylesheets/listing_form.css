@@ -1,10 +1,10 @@
 .listing-form-container {
   background-color: rgb(15, 15, 15);
-  left: 50%;
+  /* left: 50%;
   top: 50%;
   margin-left: -300px;
   margin-top: -300px;
-  position: absolute;
+  position: absolute; */
   width: 600px;
   height: 600px;
   z-index: 2;

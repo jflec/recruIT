@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react';
 import axios from 'axios';
 import Listing from './Listing';
 import ListingForm from '../ListingForm/ListingForm';
+// import ListingFormButton from '../ListingForm/ListingFormButton';
 
 const Listings = () => {
   const [listings, setListings] = useState([]);
@@ -70,6 +71,7 @@ const Listings = () => {
         handleSubmit={handleSubmit}
         handleCheckboxChange={handleCheckboxChange}
       />
+      {/* <ListingFormButton /> */}
       <div id="listings">{list}</div>
     </Fragment>
   ) : (

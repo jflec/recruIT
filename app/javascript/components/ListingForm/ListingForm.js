@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const ListingForm = (props) => {
+  const [searchTerm, setSearchTerm] = useState('');
   const skills = [
     'Golang',
     'Python',
@@ -41,11 +42,14 @@ const ListingForm = (props) => {
     'Docker',
     'Jenkins',
   ].sort();
-
   const titles = ['Frontend', 'Backend', 'Fullstack'];
   const experience_levels = ['Junior', 'Mid', 'Senior'];
-  const position_types = ['Contract', 'Part-time', 'Full-time'];
+  const position_types = ['Full-time', 'Part-time', 'Contract'];
   const textboxes = ['company', 'location', 'description'];
+
+  const handleChange = (e) => {
+    const filtered_items = skills.filter(e);
+  };
 
   return (
     <div className="listing-form-container">
@@ -54,7 +58,7 @@ const ListingForm = (props) => {
           <div id="title-buttons">
             {titles.map((title) => {
               return (
-                <label>
+                <label id="listing-form-labels">
                   <input
                     type="radio"
                     value={title}
@@ -70,7 +74,7 @@ const ListingForm = (props) => {
           <div id="experience_level-buttons">
             {experience_levels.map((experience_level) => {
               return (
-                <label>
+                <label id="listing-form-labels">
                   <input
                     type="radio"
                     value={experience_level}
@@ -86,7 +90,7 @@ const ListingForm = (props) => {
           <div id="position_type-buttons">
             {position_types.map((position_type) => {
               return (
-                <label>
+                <label id="listing-form-labels">
                   <input
                     type="radio"
                     value={position_type}
@@ -99,20 +103,41 @@ const ListingForm = (props) => {
             })}
           </div>
         </div>
+
+        <input
+          id="search"
+          type="text"
+          placeholder="Search"
+          spellCheck="false"
+          onChange={(event) => {
+            setSearchTerm(event.target.value);
+          }}
+        ></input>
+
         <div id="skills-buttons">
-          {skills.map((skill) => {
-            return (
-              <label>
-                <input
-                  type="checkbox"
-                  value={skill}
-                  name="skills"
-                  onChange={props.handleCheckboxChange}
-                ></input>
-                {skill}
-              </label>
-            );
-          })}
+          {skills
+            ?.filter((skill) => {
+              if (searchTerm == '') {
+                return skill;
+              } else if (
+                skill.toLowerCase().includes(searchTerm.toLowerCase())
+              ) {
+                return skill;
+              }
+            })
+            .map((skill) => {
+              return (
+                <label>
+                  <input
+                    type="checkbox"
+                    value={skill}
+                    name="skills"
+                    onChange={props.handleCheckboxChange}
+                  ></input>
+                  {skill}
+                </label>
+              );
+            })}
         </div>
 
         <div id="listing-form-textbox-container">

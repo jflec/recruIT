@@ -1,18 +1,9 @@
 .listing-form-container {
-  background-color: #ffffff;
-  /* left: 50%;
-  top: 50%;
-  margin-left: -300px;
-  margin-top: -300px;
-  position: absolute; */
-  width: 800px;
-  z-index: 2;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #181818;
+  color: #ffffff;
   padding: 20px;
 }
 
@@ -25,7 +16,7 @@
 }
 
 #title-buttons {
-  gap: 4px;
+  gap: 12px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -48,26 +39,13 @@
   flex-direction: column;
 }
 
-#experience_level-buttons label {
+#listing-form-labels {
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 6px;
-  background-color: #ececec;
-  padding: 8px;
-  width: 100%;
-  border-radius: 10px;
-  transition: 0.2s;
-}
-
-#position_type-buttons label {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 6px;
-  background-color: #ececec;
+  background-color: #161616;
   padding: 8px;
   width: 100%;
   border-radius: 10px;
@@ -76,9 +54,9 @@
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-#position_type-buttons label:hover {
+#listing-form-labels:hover {
   transition: 0.2s;
-  background-color: rgb(214, 214, 214);
+  background-color: rgb(0, 0, 0);
   box-shadow: rgba(50, 50, 93, 0.5) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.6) 0px 1px 3px -1px;
 }

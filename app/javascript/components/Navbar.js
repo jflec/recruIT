@@ -7,6 +7,9 @@ const Navbar = () => {
         <h1>MØDE</h1>
         <div id="navbar-menu">
           <p>Home</p>
+          <p>Home</p>
+          <p>Home</p>
+          <p>Home</p>
         </div>
         <div id="navbar-auth">
           <button>Login</button>

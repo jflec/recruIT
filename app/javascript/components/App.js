@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { useRoutes } from 'react-router-dom';
 import Listing from './Listing/Listing';
 import Listings from './Listings/Listings';
@@ -10,10 +10,10 @@ const App = () => {
     { path: '/listings/:id', element: <Listing /> },
   ]);
   return (
-    <div id="App">
+    <Fragment>
       <Navbar />
       {routes}
-    </div>
+    </Fragment>
   );
 };
 

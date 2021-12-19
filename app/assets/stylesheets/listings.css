@@ -14,8 +14,8 @@
   height: 140px;
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  background-color: #ffffff;
-  color: #181818;
+  background-color: #111111;
+  color: #ffffff;
 }
 
 .listing-item * {

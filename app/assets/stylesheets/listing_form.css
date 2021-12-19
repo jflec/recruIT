@@ -1,18 +1,19 @@
 .listing-form-container {
-  background-color: rgb(15, 15, 15);
+  background-color: #ffffff;
   /* left: 50%;
   top: 50%;
   margin-left: -300px;
   margin-top: -300px;
   position: absolute; */
-  width: 600px;
-  height: 600px;
+  width: 800px;
   z-index: 2;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #181818;
+  padding: 20px;
 }
 
 #listing-form {
@@ -32,7 +33,7 @@
 }
 
 #experience_level-buttons {
-  gap: 4px;
+  gap: 12px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -40,11 +41,52 @@
 }
 
 #position_type-buttons {
-  gap: 4px;
+  gap: 12px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+}
+
+#experience_level-buttons label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  background-color: #ececec;
+  padding: 8px;
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+#position_type-buttons label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  background-color: #ececec;
+  padding: 8px;
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.2s;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+#position_type-buttons label:hover {
+  transition: 0.2s;
+  background-color: rgb(214, 214, 214);
+  box-shadow: rgba(50, 50, 93, 0.5) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.6) 0px 1px 3px -1px;
+}
+
+#skills-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 12px;
 }
 
 #listing-form-textbox-container {
@@ -53,4 +95,12 @@
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+}
+
+#listing-form-radio-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }

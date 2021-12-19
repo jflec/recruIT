@@ -12,5 +12,29 @@
 #navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+
+#navbar-auth button {
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#navbar-auth button:hover {
+  transition: 0.2s;
+  background-color: white;
+  color: #181818;
+}
+
+#navbar h1 {
+  font-size: 28px;
+  font-family: Quantum;
+  color: rgb(255, 255, 255);
 }

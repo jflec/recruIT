@@ -4,11 +4,9 @@ const Navbar = () => {
   return (
     <div id="navbar-container">
       <div id="navbar">
-        <div id="logo">
-          <h1>recru-IT</h1>
-        </div>
+        <h1>MØDE</h1>
         <div id="navbar-menu">
-          <p></p>
+          <p>Home</p>
         </div>
         <div id="navbar-auth">
           <button>Login</button>

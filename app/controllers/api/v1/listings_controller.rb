@@ -43,7 +43,7 @@ module Api
             end
 
             private
-
+            
             def listing_params
                 params.require(:listing).permit(:title, :description, :recruiter_id, :company, :company_image_url, :company_size, :applicants, :education, :work_experience, :location, :position_type, :experience_level, :compensation, :benefits, skills: [])
             end

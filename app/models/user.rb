@@ -1,6 +1,9 @@
 class User < ApplicationRecord
-  
+
+  attr_accessor :password
+
   def password=(raw)
+    @password = raw
     self.password_digest = BCrypt::Password.create(raw)
   end
 

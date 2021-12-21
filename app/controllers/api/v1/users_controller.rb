@@ -9,6 +9,7 @@ module Api
                 @user = User.new(user_params)
                 if @user.save
                     p "success"
+        
                 else
                     render json: @user.errors.full_messages, status: 422
                 end
@@ -17,7 +18,7 @@ module Api
             private
             
             def user_params
-                params.require(:user).permit(:username, :password, :email, :first_name, :last_name)
+                params.permit(:username, :password, :email, :first_name, :last_name)
             end
 
         end

@@ -1,33 +1,30 @@
-import axios from 'axios';
 import React, { useState } from 'react';
-import SignupForm from './SignupForm';
+import SessionForm from './SessionForm';
+import axios from 'axios';
 
-const Signup = () => {
-  const [user, setUser] = useState({});
+const Login = () => {
+  const [session, setSession] = useState({});
 
   const handleChange = (e) => {
-    setUser(Object.assign({}, user, { [e.target.name]: e.target.value }));
+    setSession(Object.assign({}, session, { [e.target.name]: e.target.value }));
   };
 
   const handleSubmit = (e) => {
-    console.log(user);
     e.preventDefault();
 
     const csrfToken = document.querySelector('[name=csrf-token]').content;
     axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken;
 
     axios
-      .post('/api/v1/users', user)
+      .post('/api/v1/sessions', session)
       .then((resp) => console.log(resp))
       .catch((error) => console.log(error));
   };
-
   return (
     <div>
-      <h1>Signup PAGE</h1>
-      <SignupForm handleChange={handleChange} handleSubmit={handleSubmit} />
+      <SessionForm handleChange={handleChange} handleSubmit={handleSubmit} />
     </div>
   );
 };
 
-export default Signup;
+export default Login;

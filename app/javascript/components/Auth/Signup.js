@@ -17,7 +17,11 @@ const Signup = () => {
     axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken;
 
     axios
-      .post('/api/v1/users', user)
+      .post('/api/v1/users', {
+        user: {
+          ...user,
+        },
+      })
       .then((resp) => console.log(resp))
       .catch((error) => console.log(error));
   };

@@ -1,6 +1,11 @@
 class User < ApplicationRecord
 
-  attr_accessor :password
+  validates :email, :username, uniqueness: true, presence: true
+  validates :password, length { minimum: 9, allow_nil: true}
+
+  def password
+    @password
+  end
 
   def password=(raw)
     @password = raw

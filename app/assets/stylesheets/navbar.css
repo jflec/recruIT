@@ -24,6 +24,11 @@
   text-decoration: none;
 }
 
+#navbar-menu {
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+}
+
 #navbar-auth {
   display: flex;
   align-items: center;
@@ -38,19 +43,19 @@
   font-size: 16px;
   margin-bottom: 0px;
   transition: 0.2s;
-  max-width: 110px;
+  max-width: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 8px 60px;
 }
 
 #navbar-auth button:hover {
   transition: 0.2s;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 #nav-login {
-  padding: 8px 36px;
   background-color: #202020;
   color: #f6f6f6;
   border: 2px solid #f6f6f6;
@@ -58,8 +63,18 @@
 
 #nav-register {
   border: none;
-  padding: 8px 36px;
   color: #202020;
   background-color: #f6f6f6;
   border: 2px solid #f6f6f6;
+}
+
+.nav-right-arrow {
+  transition: ease-in-out 0.2s;
+  font-size: 0;
+}
+
+#navbar-auth button:hover .nav-right-arrow {
+  transition: ease-in-out 0.2s;
+  transform: translateX(8px);
+  font-size: 14px;
 }

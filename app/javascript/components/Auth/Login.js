@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import SessionForm from './SessionForm';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 const Login = () => {
   const [session, setSession] = useState({});
@@ -21,8 +24,13 @@ const Login = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <div>
-      <SessionForm handleChange={handleChange} handleSubmit={handleSubmit} />
+    <div id="auth-background">
+      <Link to={'/'}>
+        <FontAwesomeIcon className="home-icon" icon={faHome} />
+      </Link>
+      <div id="auth-modal">
+        <SessionForm handleChange={handleChange} handleSubmit={handleSubmit} />
+      </div>
     </div>
   );
 };

@@ -6,20 +6,14 @@ const Navbar = () => {
     <div id="navbar-container">
       <div id="navbar">
         <Link to={'/'}>
-          <h1>MØDE</h1>
+          <h1>møde</h1>
         </Link>
-        <div id="navbar-menu">
-          <p>Home</p>
-          <p>Home</p>
-          <p>Home</p>
-          <p>Home</p>
-        </div>
         <div id="navbar-auth">
           <Link to={'/login'}>
-            <button>Login</button>
+            <button id="nav-login">Login</button>
           </Link>
           <Link to={'/signup'}>
-            <button>Sign Up</button>
+            <button id="nav-register">Register</button>
           </Link>
         </div>
       </div>

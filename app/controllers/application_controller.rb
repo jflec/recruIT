@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
-    helper_method :current_user
+
+    protect_from_forgery with: :exception
+    helper_method :current_user, :logged_in?
 
     def current_user
         if session[:user_id]
@@ -7,5 +9,8 @@ class ApplicationController < ActionController::Base
         end
     end
 
+    def logged_in? 
+        !!current_user
+    end
 
 end

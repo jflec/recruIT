@@ -1,7 +1,7 @@
 class User < ApplicationRecord
 
   validates :email, :username, uniqueness: true, presence: true
-  validates :password, length { minimum: 9, allow_nil: true}
+  validates :password, length: { minimum: 6, allow_nil: true}
 
   def password
     @password

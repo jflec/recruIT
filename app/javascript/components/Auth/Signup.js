@@ -28,9 +28,11 @@ const Signup = () => {
   };
 
   return (
-    <div>
+    <div id="auth-container">
       <HomeBackButton />
-      <SignupForm handleChange={handleChange} handleSubmit={handleSubmit} />
+      <div id="auth-modal">
+        <SignupForm handleChange={handleChange} handleSubmit={handleSubmit} />
+      </div>
     </div>
   );
 };

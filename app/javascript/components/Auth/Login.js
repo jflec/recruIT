@@ -41,7 +41,7 @@ const Login = () => {
         </div>
         <div id="auth-links">
           <Link to={`/signup`}>
-            <h3>Have an account?</h3>
+            <h3>Need an account?</h3>
           </Link>
         </div>
       </div>

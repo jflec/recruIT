@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import SessionForm from './SessionForm';
 import axios from 'axios';
 import HomeBackButton from '../HomeBackButton';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [session, setSession] = useState({});
@@ -37,6 +38,12 @@ const Login = () => {
           <i id="google-auth" className="devicon-google-plain"></i>
           <i id="github-auth" className="devicon-github-original"></i>
           <i id="linkedin-auth" className="devicon-linkedin-plain"></i>
+        </div>
+        <div id="auth-links">
+          <Link to={`/signup`}>
+            <h3>Have an account?</h3>
+          </Link>
+          <h3>Forgot your password?</h3>
         </div>
       </div>
     </div>

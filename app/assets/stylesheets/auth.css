@@ -11,7 +11,7 @@
 
 #auth-modal {
   width: 400px;
-  height: 500px;
+  height: 440px;
   background-color: #202020;
   border: 2px solid #2c2c2c;
   border-radius: 12px;
@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   background: rgba(130, 130, 130, 0.2);
   backdrop-filter: blur(3.5px);
   -webkit-backdrop-filter: blur(3.5px);
@@ -129,16 +129,12 @@
 }
 
 #auth-modal #logo {
-  position: absolute;
-  top: 40px;
   color: #f6f6f6;
   font-size: 28px;
   font-family: 'Quicksand', sans-serif;
 }
 
 #auth-modal p {
-  position: absolute;
-  top: 94px;
   color: #f6f6f6;
   font-size: 18px;
   font-family: 'Manrope', sans-serif;
@@ -201,6 +197,28 @@
 #auth-icons *:hover {
   transition: 0.2s;
   transform: scale(1.06);
-
   box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 12px;
+}
+
+#auth-modal h3 {
+  color: #f6f6f6;
+  font-size: 14px;
+  font-family: 'Manrope', sans-serif;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#auth-links {
+  transition: 0.2s;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#auth-modal h3:hover {
+  transition: 0.2s;
+  color: #aaaaaa;
 }

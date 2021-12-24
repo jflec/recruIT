@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import HomeBackButton from '../HomeBackButton';
 import SignupForm from './SignupForm';
 
 const Signup = () => {
@@ -28,7 +29,7 @@ const Signup = () => {
 
   return (
     <div>
-      <h1>Signup PAGE</h1>
+      <HomeBackButton />
       <SignupForm handleChange={handleChange} handleSubmit={handleSubmit} />
     </div>
   );

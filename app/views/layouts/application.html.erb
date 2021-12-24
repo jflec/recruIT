@@ -11,6 +11,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="three.r119.min.js"></script>
+    <script src="vanta.globe.min.js"></script>
+    <script>
+    VANTA.GLOBE({
+      el: "#auth-background",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x434343,
+      backgroundColor: 0x161616
+    })
+    </script>
     <%= javascript_pack_tag 'index' %>
   </head>
   <body>

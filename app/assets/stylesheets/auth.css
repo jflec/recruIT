@@ -1,5 +1,5 @@
 #auth-background {
-  background-color: #f6f6f6;
+  background-color: #202020;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,30 +8,92 @@
 }
 
 #auth-modal {
-  width: 600px;
-  height: 600px;
-  background-color: #f6f6f6;
-  border: 1px solid #cecece;
-  border-radius: 10px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  width: 400px;
+  height: 500px;
+  background-color: #202020;
+  border: 2px solid #2c2c2c;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 12px;
+  position: relative;
 }
 
 .home-icon {
-  padding: 20px;
+  padding: 16px;
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 20px;
+  left: 20px;
   font-size: 24px;
   color: white;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border-radius: 12px;
+  border: 2px solid #2c2c2c;
   background-color: #202020;
   transition: 0.2s;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  cursor: pointer;
 }
 
 .home-icon:hover {
   transition: 0.2s;
   transform: scale(1.1);
+  background-color: #2c2c2c;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 12px;
+}
+
+#login-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  font-family: 'Manrope', sans-serif;
+  gap: 20px;
+}
+
+#login-form input {
+  width: 240px;
+  height: 20px;
+  padding: 16px;
+  transition: 0.2s;
+  border-radius: 12px;
+  background-color: #202020;
+  border: 2px solid #2c2c2c;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+#login-form input:focus {
+  transition: 0.2s;
+  background-color: #2c2c2c;
+  outline: none !important;
+  transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 12px;
+}
+
+.login-button {
+  padding: 16px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: white;
+  border-radius: 12px;
+  border: 2px solid #2c2c2c;
+  background-color: #202020;
+  transition: 0.2s;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  cursor: pointer;
+  min-height: 60px;
+  min-width: 60px;
+  max-height: 60px;
+  max-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-button:hover {
+  transition: 0.2s;
+  transform: scale(1.1);
+  background-color: #2c2c2c;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 12px;
 }

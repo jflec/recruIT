@@ -6,19 +6,18 @@ const SessionForm = ({ handleChange, handleSubmit }) => {
   return (
     <form onSubmit={handleSubmit}>
       <div id="login-form">
-        <label>
-          Username
-          <input type="text" name="username" onChange={handleChange}></input>
-        </label>
-        <label>
-          Password
-          <input
-            type="password"
-            name="password"
-            onChange={handleChange}
-          ></input>
-        </label>
-
+        <input
+          type="text"
+          placeholder="Username"
+          name="username"
+          onChange={handleChange}
+        ></input>
+        <input
+          type="password"
+          placeholder="Password"
+          name="password"
+          onChange={handleChange}
+        ></input>
         <button className="login-button" type="submit">
           <FontAwesomeIcon icon={faArrowRight} />
         </button>

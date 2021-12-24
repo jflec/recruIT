@@ -22,23 +22,22 @@ const Login = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <div id="auth-background">
+    <div id="auth-container">
       <HomeBackButton />
       <div id="auth-modal">
+        <h1 id="logo">møde</h1>
+        <p>Login</p>
         <SessionForm handleChange={handleChange} handleSubmit={handleSubmit} />
-      </div>
-      <div className="custom-shape-divider-bottom-1640302277">
-        <svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-            className="shape-fill"
-          ></path>
-        </svg>
+        <div id="or-divide">
+          <div className="divider"></div>
+          <h2>or</h2>
+          <div className="divider"></div>
+        </div>
+        <div id="auth-icons">
+          <i id="google-auth" className="devicon-google-plain"></i>
+          <i id="github-auth" className="devicon-github-original"></i>
+          <i id="linkedin-auth" className="devicon-linkedin-plain"></i>
+        </div>
       </div>
     </div>
   );

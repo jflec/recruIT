@@ -1,10 +1,12 @@
-#auth-background {
+#auth-container {
   background-color: #202020;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100vw;
   height: 100vh;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1116%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='rgba(32%2c 32%2c 32%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c802.478C147.479%2c785.892%2c260.291%2c679.09%2c389.465%2c606.019C527.625%2c527.865%2c728.874%2c506.971%2c784.926%2c358.464C841.525%2c208.51%2c668.231%2c65.633%2c653.672%2c-93.984C637.851%2c-267.435%2c798.541%2c-462.464%2c697.129%2c-604.066C598.136%2c-742.292%2c376.477%2c-681.224%2c209.645%2c-713.986C60.608%2c-743.254%2c-84.024%2c-825.06%2c-230.881%2c-786.307C-379.082%2c-747.2%2c-477.811%2c-616.677%2c-582.691%2c-504.905C-691.743%2c-388.686%2c-853.458%2c-282.092%2c-853.547%2c-122.721C-853.637%2c38.471%2c-654.055%2c121.557%2c-583.122%2c266.303C-515.143%2c405.021%2c-563.864%2c595.886%2c-450.149%2c700.446C-334.552%2c806.736%2c-156.052%2c820.028%2c0%2c802.478' fill='%23161616'%3e%3c/path%3e%3cpath d='M1920 2012.6950000000002C2094.848 2034.688 2269.812 1948.769 2408.224 1839.692 2539.805 1735.998 2600.975 1575.157 2669.305 1422.196 2737.08 1270.478 2849.445 1112.788 2804.397 952.843 2759.531 793.5450000000001 2565.754 738.222 2444.839 625.2239999999999 2339.5950000000003 526.871 2264.704 403.30999999999995 2139.724 331.68899999999996 1988.5529999999999 245.05999999999995 1817.904 114.56799999999998 1653.274 171.61300000000006 1487.48 229.062 1478.299 465.13 1365.862 599.837 1256.4589999999998 730.909 1045.675 782.64 1004.885 948.4259999999999 964.012 1114.55 1070.107 1281.978 1162.62 1425.884 1246.366 1556.152 1382.384 1631.208 1504.804 1726.058 1640.495 1831.19 1749.689 1991.2730000000001 1920 2012.6950000000002' fill='%232a2a2a'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1116'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-size: 100% 100%;
 }
 
 #auth-modal {
@@ -15,6 +17,16 @@
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 12px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(130, 130, 130, 0.2);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .home-icon {
@@ -23,7 +35,7 @@
   top: 20px;
   left: 20px;
   font-size: 24px;
-  color: white;
+  color: #f6f6f6;
   border-radius: 12px;
   border: 2px solid #2c2c2c;
   background-color: #202020;
@@ -34,7 +46,7 @@
 
 .home-icon:hover {
   transition: 0.2s;
-  transform: scale(1.1);
+  transform: scale(1.06);
   background-color: #2c2c2c;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 12px;
 }
@@ -44,29 +56,29 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  color: white;
+  color: #f6f6f6;
   font-family: 'Manrope', sans-serif;
-  gap: 20px;
+  gap: 10px;
 }
 
 #login-form input {
-  width: 240px;
+  width: 280px;
   height: 20px;
   padding: 16px;
   transition: 0.2s;
   border-radius: 12px;
   background-color: #202020;
   border: 2px solid #2c2c2c;
-  color: white;
+  color: #f6f6f6;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  font-size: 18px;
 }
 
 #login-form input:focus {
   transition: 0.2s;
-  background-color: #2c2c2c;
   outline: none !important;
-  transform: scale(1.1);
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 12px;
+  transform: scale(1.06);
+  border: 2px solid #202020;
 }
 
 .login-button {
@@ -75,11 +87,10 @@
   bottom: 20px;
   right: 20px;
   font-size: 24px;
-  color: white;
+  color: #f6f6f6;
   border-radius: 12px;
-  border: 2px solid #2c2c2c;
-  background-color: #202020;
   transition: 0.2s;
+  background-color: transparent;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   cursor: pointer;
   min-height: 60px;
@@ -89,11 +100,107 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .login-button:hover {
   transition: 0.2s;
-  transform: scale(1.1);
+  transform: scale(1.06);
+  background-color: #202020;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 12px;
+  border: #202020;
+}
+
+.login-button:focus {
+  transition: 0.2s;
   background-color: #2c2c2c;
+  outline: none !important;
+  transform: scale(1.06);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 12px;
+  border: #202020;
+}
+
+#or-divide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+#auth-modal #logo {
+  position: absolute;
+  top: 40px;
+  color: #f6f6f6;
+  font-size: 28px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#auth-modal p {
+  position: absolute;
+  top: 94px;
+  color: #f6f6f6;
+  font-size: 18px;
+  font-family: 'Manrope', sans-serif;
+}
+
+#auth-modal h2 {
+  font-family: 'Manrope', sans-serif;
+  color: #f6f6f6;
+  font-size: 16px;
+}
+
+.divider {
+  width: 110px;
+  height: 2px;
+  background-color: #2c2c2c;
+}
+
+#auth-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: #f6f6f6;
+  font-size: 18px;
+}
+
+#auth-icons * {
+  padding: 8px 14px;
+  font-size: 24px;
+  color: #f6f6f6;
+  border-radius: 12px;
+  border: 2px solid #2c2c2c;
+  background-color: #202020;
+  transition: 0.2s;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  cursor: pointer;
+  min-height: 36px;
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#google-auth:hover {
+  background-color: #de5246;
+  border: 2px solid #de5246;
+}
+
+#github-auth:hover {
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  color: #202020;
+}
+
+#linkedin-auth:hover {
+  background-color: #0a66c2;
+  border: 2px solid #0a66c2;
+}
+
+#auth-icons *:hover {
+  transition: 0.2s;
+  transform: scale(1.06);
+
   box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 12px;
 }

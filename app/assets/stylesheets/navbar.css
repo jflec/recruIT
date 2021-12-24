@@ -53,7 +53,7 @@
 
 #navbar-auth button:hover {
   transition: 0.2s;
-  transform: scale(1.1);
+  transform: scale(1.06);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 12px;
 }
 

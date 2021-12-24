@@ -43,7 +43,6 @@ const Login = () => {
           <Link to={`/signup`}>
             <h3>Have an account?</h3>
           </Link>
-          <h3>Forgot your password?</h3>
         </div>
       </div>
     </div>

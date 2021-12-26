@@ -32,6 +32,8 @@ const Signup = () => {
     <div id="auth-container">
       <HomeBackButton />
       <div id="auth-modal">
+        <h1 id="logo">møde</h1>
+        <p>Sign Up</p>
         <SignupForm handleChange={handleChange} handleSubmit={handleSubmit} />
         <Link to={'/login'}>
           <h3>Have an account?</h3>

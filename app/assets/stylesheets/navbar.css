@@ -43,18 +43,12 @@
   font-size: 16px;
   margin-bottom: 0px;
   transition: 0.2s;
-  max-width: 120px;
+  width: 124px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 60px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
-
-#navbar-auth button:hover {
-  transition: 0.2s;
-  transform: scale(1.06);
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 12px;
 }
 
 #nav-login {

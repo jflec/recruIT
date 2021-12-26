@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import HomeBackButton from '../HomeBackButton';
 import SignupForm from './SignupForm';
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
   const [user, setUser] = useState({});
@@ -32,6 +33,9 @@ const Signup = () => {
       <HomeBackButton />
       <div id="auth-modal">
         <SignupForm handleChange={handleChange} handleSubmit={handleSubmit} />
+        <Link to={'/login'}>
+          <h3>Have an account?</h3>
+        </Link>
       </div>
     </div>
   );

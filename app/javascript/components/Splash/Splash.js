@@ -11,7 +11,7 @@ const Splash = () => {
         <h1>Real connections real fast</h1>
         <p>designed by software engineers, for software engineers</p>
         <button>
-          Sign Up{' '}
+          Register{' '}
           <FontAwesomeIcon className="nav-right-arrow" icon={faArrowRight} />
         </button>
       </div>

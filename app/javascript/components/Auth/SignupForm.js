@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const SignupForm = ({ handleChange, handleSubmit }) => {
   return (
@@ -39,7 +41,9 @@ const SignupForm = ({ handleChange, handleSubmit }) => {
           onChange={handleChange}
         ></input>
 
-        <button type="submit">SIGN UP</button>
+        <button className="continue-button" type="submit">
+          <FontAwesomeIcon icon={faArrowRight} />
+        </button>
       </div>
     </form>
   );

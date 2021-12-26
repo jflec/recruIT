@@ -19,7 +19,7 @@ const SessionForm = ({ handleChange, handleSubmit }) => {
           onChange={handleChange}
         ></input>
         <h3>Forgot your password?</h3>
-        <button className="login-button" type="submit">
+        <button className="continue-button" type="submit">
           <FontAwesomeIcon icon={faArrowRight} />
         </button>
       </div>

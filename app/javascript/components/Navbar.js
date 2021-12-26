@@ -32,7 +32,7 @@ const Navbar = () => {
           </Link>
           <Link to={'/signup'}>
             <button id="nav-register">
-              Register{' '}
+              Sign Up{' '}
               <FontAwesomeIcon
                 className="nav-right-arrow"
                 icon={faArrowRight}

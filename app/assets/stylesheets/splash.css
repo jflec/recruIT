@@ -11,6 +11,10 @@
   font-weight: 900;
 }
 
+#splash a {
+  text-decoration: none;
+}
+
 #splash button {
   font-family: 'Manrope', sans-serif;
   border-radius: 50px;
